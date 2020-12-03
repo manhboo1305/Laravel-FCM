@@ -66,6 +66,13 @@ class PayloadNotificationBuilder
      * @var null|string
      */
     protected $color;
+    
+    /**
+     * @internal
+     *
+     * @var null|string
+     */
+    protected $image;
 
     /**
      * @internal
