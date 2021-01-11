@@ -34,12 +34,12 @@ abstract class BaseRequest
      *
      * @return array
      */
-    protected function buildRequestHeader()
+    protected function buildRequestHeader($prefix = '')
     {
         return [
-            'Authorization' => 'key='.$this->config['server_key'],
+            'Authorization' => 'key='.$this->config['server_key' . $prefix],
             'Content-Type' => 'application/json',
-            'project_id' => $this->config['sender_id'],
+            'project_id' => $this->config['sender_id' . $prefix],
         ];
     }
 
@@ -55,10 +55,10 @@ abstract class BaseRequest
      *
      * @return array
      */
-    public function build()
+    public function build($prefix = '')
     {
         return [
-            'headers' => $this->buildRequestHeader(),
+            'headers' => $this->buildRequestHeader($prefix),
             'json' => $this->buildBody(),
         ];
     }

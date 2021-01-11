@@ -47,6 +47,8 @@ class Request extends BaseRequest
      */
     protected $topic;
 
+    protected $prefix;
+
     /**
      * Request constructor.
      *
@@ -56,7 +58,7 @@ class Request extends BaseRequest
      * @param PayloadData         $data
      * @param Topics|null         $topic
      */
-    public function __construct($to, Options $options = null, PayloadNotification $notification = null, PayloadData $data = null, Topics $topic = null)
+    public function __construct($to, Options $options = null, PayloadNotification $notification = null, PayloadData $data = null, Topics $topic = null, $prefix = '')
     {
         parent::__construct();
 
@@ -65,6 +67,7 @@ class Request extends BaseRequest
         $this->notification = $notification;
         $this->data = $data;
         $this->topic = $topic;
+        $this->prefix = $prefix;
     }
 
     /**
