@@ -1,5 +1,5 @@
 {
-    "name": "manhnd/laravel-fcm",
+    "name": "manhboo1305/laravel-fcm",
     "description": "Laravel / Lumen package for Firebase Cloud Messaging ",
     "keywords": ["laravel", "lumen", "firebase", "notification", "push", "fcm", "firebase cloud messaging"],
     "type": "library",
